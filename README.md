@@ -5,7 +5,7 @@ You still need to change the Resin amount everytime you used it. But now you can
 
 Resin can go above the limit, telling you how much Resin overflowed. Pain.
 
-Still tracked correctly with either the program closed or open.
+Still track correctly with either the program closed or open.
 
 Actual Resin value might be differ by up to 1 Resin (~8 min or less).
 
