@@ -12,3 +12,5 @@ Actual Resin value might be differ by up to 1 Resin (~8 min or less).
 Preview:
 
 ![image](https://user-images.githubusercontent.com/43719375/110257946-b9ae4e00-7fd2-11eb-8e91-766f2c517915.png)
+
+**Will create a .txt file within the same directory to save data**
