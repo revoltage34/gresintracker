@@ -53,9 +53,14 @@ class GRES(object):
         file.write(str(math.floor(time.time())) + "\n" + str(resin) + "\n" + str(self.residue))
         file.close()
         
-        mins = (160 - resin) * 8
-        self.resinTimeVar.set("Full in: " + str(math.floor(mins/60)) + "h " + str(mins%60) + "m")
-        self.resinDateVar.set("" + datetime.fromtimestamp(time.time() + (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
+        if resin <= 160:
+            mins = (160 - resin) * 8
+            self.resinTimeVar.set("Full in: " + str(math.floor(mins/60)) + "h " + str(mins%60) + "m")
+            self.resinDateVar.set("" + datetime.fromtimestamp(time.time() + (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
+        else:
+            mins = (resin - 160) * 8
+            self.resinTimeVar.set("Overflowed: " + str(math.floor(mins/60)) + "h " + str(mins%60) + "m")
+            self.resinDateVar.set("" + datetime.fromtimestamp(time.time() + (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
         
     def LoadTime(self):
         try:
@@ -66,8 +71,6 @@ class GRES(object):
             if self.residue >= 480:
                 self.residue -= 480
                 resin += 1
-            #if resin > 160: #Resin Limit
-                #resin = 160
             
             self.resinVar.set(resin)
         except:
