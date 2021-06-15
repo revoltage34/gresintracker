@@ -13,4 +13,7 @@ Preview:
 
 ![image](https://user-images.githubusercontent.com/43719375/110257946-b9ae4e00-7fd2-11eb-8e91-766f2c517915.png)
 
+![image](https://user-images.githubusercontent.com/43719375/122063894-dac8db00-ce1a-11eb-96e9-0088dbc69ae0.png)
+
+
 **Will create a .txt file within the same directory to save data**
