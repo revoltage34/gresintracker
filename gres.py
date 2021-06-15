@@ -59,8 +59,8 @@ class GRES(object):
             self.resinDateVar.set("" + datetime.fromtimestamp(time.time() + (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
         else:
             mins = (resin - 160) * 8
-            self.resinTimeVar.set("Overflowed: " + str(math.floor(mins/60)) + "h " + str(mins%60) + "m")
-            self.resinDateVar.set("" + datetime.fromtimestamp(time.time() + (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
+            self.resinTimeVar.set("Overflow: " + str(math.floor(mins/60)) + "h " + str(mins%60) + "m")
+            self.resinDateVar.set("" + datetime.fromtimestamp(time.time() - (mins * 60)).strftime("%d %b, %H:%M (%a)") + "")
         
     def LoadTime(self):
         try:
